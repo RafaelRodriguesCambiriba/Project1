@@ -77,6 +77,13 @@ class User1
         $value =filter_var($dataUser['value'], FILTER_SANITIZE_SPECIAL_CHARS);
         $idTypeFuture =filter_var($dataUser['idTypeFuture'], FILTER_SANITIZE_SPECIAL_CHARS);
 
+        if ($idTypeFuture == 'Selecione'){
+            return [
+                'success' => false,
+                'msg' => 'Selecione o tipo da fatura!!'
+            ];
+        }
+
         session_start();
         $idUser=$_SESSION['id_user'];
 

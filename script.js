@@ -155,7 +155,7 @@ function sendTransacao(nameTransacao,value,idTypeFuture) {
             'Content-Type': 'application/json'
         }
     }
-    let myRequest = new Request('http://localhost:8000/project1/financa1/conecta.php', parametrosRequest)
+    let myRequest = new Request('http://localhost:8000/conecta.php', parametrosRequest)
     fetch(myRequest).then(response => {
         return response.json();
     }).then(function (response) {
@@ -215,7 +215,7 @@ function getUser(name) {
             'Content-Type': 'application/json'
         }
     }
-    let myRequest = new Request('http://localhost:8000/project1/financa1/conecta.php', configRequest);
+    let myRequest = new Request('http://localhost:8000/conecta.php', configRequest);
     document.getElementById('result-list').innerHTML = getLoaginTr();
     fetch(myRequest).then(function (response) {
         return response.json();
